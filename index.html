@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>청첩장으로 이동중...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+        .loading {
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <p>청첩장으로 이동중입니다...</p>
+        <p>잠시만 기다려주세요 💕</p>
+    </div>
+    
+    <script>
+        // 실제 청첩장 링크로 변경하세요
+        const weddingUrl = "https://your-wedding-invitation-link.com";
+        
+        // 2초 후 리다이렉트 (즉시 이동하려면 0으로 변경)
+        setTimeout(function() {
+            window.location.href = weddingUrl;
+        }, 2000);
+        
+        // 만약 자동 리다이렉트가 안되면 수동 링크 제공
+        setTimeout(function() {
+            document.body.innerHTML += '<p><a href="' + weddingUrl + '">여기를 클릭해주세요</a></p>';
+        }, 5000);
+    </script>
+</body>
+</html>
